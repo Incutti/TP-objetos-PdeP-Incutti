@@ -1,4 +1,4 @@
-import Bandas.Banda.Banda
+import src.Bandas.Banda.Banda
 
 class BandaRock inherits Banda {
     var cantSolosGuitarra
