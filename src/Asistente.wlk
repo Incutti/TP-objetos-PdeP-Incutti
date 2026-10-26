@@ -4,8 +4,8 @@ import src.abonos.*
 
 
 class Asistente {
-    var historialEntradas = []
-    var dineroDisponible
+    const historialEntradas = []
+    var property dineroDisponible
     var abono
 
     method comprarEntrada(entrada) {
@@ -40,7 +40,7 @@ class Asistente {
     method consultarNombreDeBandas () = historialEntradas.map( { entrada => entrada.nombreDeBanda() } ).asSet()
 
     method calcularGastosHistoricos() {
-        return historialEntradas.sum().map( { entrada => entrada.precioFinal() } )
+        return historialEntradas.map( { entrada => entrada.precioFinal() } ).sum()
     }
 
     method historialEntradas() = historialEntradas

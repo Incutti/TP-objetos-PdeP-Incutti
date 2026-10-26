@@ -2,12 +2,12 @@ import src.Asistente.Asistente
 import src.Bandas.Banda.Banda
 
 object productora {
-    var asistentes = []
-    var bandas = []
+    const asistentes = []
+    const bandas = []
     var property impuesto = 0
 
     // item 1
-    method gananciaTotal() = self.calcularGananciaBruta() - self.calcularGananciaBruta()
+    method gananciaTotal() = self.calcularGananciaBruta() - self.calcularPresupuestosTotales()
 
     method calcularGananciaBruta () {
         return asistentes.map( { asistente => asistente.calcularGastosHistoricos() } ).sum()
